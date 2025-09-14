@@ -1,0 +1,40 @@
+@model CareerPathRecommender.Web.Features.Employees.ManageSkillsViewModel
+
+@{
+    ViewData["Title"] = "Manage Skills";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-primary">
+                    <h2 class="mb-0 text-white">Manage Skills</h2>
+                </div>
+                <div class="card-body">
+                    <form asp-action="ManageSkills" method="post" class="mt-3">
+                        <div>
+                            <h4>Select your skills</h4>
+                            <div class="row">
+                                @foreach (var skill in Model.AllSkills)
+                                {
+                                    <div class="col-md-4 mb-2">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                   name="SelectedSkillIds"
+                                                   value="@skill.Id"
+                                                   @(Model.SelectedSkillIds.Contains(skill.Id) ? "checked" : "") />
+
+                                            <label class="form-check-label">@skill.Name</label>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-info text-white">Save</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

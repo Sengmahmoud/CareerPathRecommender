@@ -1,0 +1,42 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+
+# Build Results
+[Dd]ebug/
+[Rr]elease/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+Logs/
+*.log
+
+# Test Results
+TestResults/
+
+# Rider
+.idea/
+*.sln.iml
+
+# Others
+*.swp
+*.bak
+*.tmp
+*.old
+*.orig
+
+# User secrets
+secrets.json
+
+# Azure
+.publishsettings

@@ -1,0 +1,74 @@
+/* Modern enhancements for Career Path Recommender */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #222;
+    font-family: 'Poppins', Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.card, .shadow-sm {
+    border-radius: 1rem;
+    box-shadow: 0 2px 12px 0 rgba(44,62,80,0.07);
+}
+
+.btn-primary, .btn-outline-primary {
+    border-radius: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.navbar {
+    border-radius: 0 0 1rem 1rem;
+}
+
+footer {
+    font-size: 1rem;
+    background: #e9ecef;
+    color: #495057;
+    border-radius: 1rem 1rem 0 0;
+    flex-shrink: 0;
+    width: 100%;
+    margin-top: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.main-content {
+    flex: 1 0 auto;
+    padding-bottom: 4rem !important; /* Ensures space above footer */
+}
+
+.container {
+    margin-bottom: 0 !important; /* Prevent margin collapse into footer */
+}
+
+.form-control, .form-select {
+    border-radius: 0.75rem;
+    min-height: 2.5rem;
+}
+
+label {
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.table {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.alert {
+    border-radius: 0.75rem;
+}

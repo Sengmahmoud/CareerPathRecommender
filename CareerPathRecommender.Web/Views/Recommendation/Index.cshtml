@@ -1,0 +1,22 @@
+<form asp-action="GetRecommendations" method="post">
+    <input type="hidden" name="employeeId" value="@Model.Employee.Id" />
+
+    <div class="row align-items-end">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="targetRoleId">Select Target Role:</label>
+                <select class="form-control" id="targetRoleId" name="targetRoleId" required>
+                    <option value="">Select</option>
+                    @foreach (var role in Model.JobRoles)
+                    {
+                        <option value="@role.Id">@role.Title</option>
+                    }
+                </select>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <button type="submit" class="btn btn-success mt-md-0 mt-3">Get Recommendations</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,39 @@
+@using CareerPathRecommender.Web.Features.Recommendations
+@{
+    ViewData["Title"] = "Recommendations";
+}
+
+@model List<RecommendationDto>
+
+<div class="card mb-4">
+    <div class="card-header bg-primary">
+        <h2 class="mb-0 text-white">Recommendations</h2>
+    </div>
+    <div class="card-body">
+        <div class="d-flex justify-content-end mb-3">
+            <a asp-controller="Recommendation" asp-action="ExportPdf" class="btn btn-primary">
+                Export to PDF
+            </a>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Title</th>
+                    <th>Reason</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var r in Model)
+                {
+                    <tr>
+                        <td>@r.Type</td>
+                        <td>@r.Title</td>
+                        <td>@r.Reason</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="javascript:history.back()">Back to Role Selection</a>
+    </div>
+</div>
