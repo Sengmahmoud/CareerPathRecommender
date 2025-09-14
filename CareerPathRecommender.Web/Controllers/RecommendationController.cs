@@ -71,6 +71,7 @@ namespace CareerPathRecommender.Web.Controllers
         public async Task<IActionResult> ExportPdf()
         {
             var employee = await _userManager.GetUserAsync(User);
+            employee.JobRole = await _context.JobRoles.FindAsync((int)(TempData["TargetRoleId"] ?? 0));
 
             if (TempData["RecommendationsJson"] is string recJson)
             {
